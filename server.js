@@ -22,21 +22,14 @@ app.use(express.json());
 // Use battery routes AFTER MongoDB connection
 const PORT = process.env.PORT || 5000;
 
-mongoose
-  .connect(process.env.MONGODB_URI)
-  .then(() => {
-    console.log("✅ MongoDB connected");
 
-    // Mount routes
-    app.use("/api/batteries", batteryRoutes);
+mongoose.connect(process.env.MONGODB_URI).then(() => {
+  console.log("✅ MongoDB connected");
 
-    // Start server
-    app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
-  })
-  .catch((err) => {
-    console.error("❌ MongoDB connection failed:", err.message);
-    process.exit(1); // Exit app if DB connection fails
-  });
+  app.use("/api/batteries", batteryRoutes);
+
+  app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+});
 
 // import express from "express";
 // import mongoose from "mongoose";
