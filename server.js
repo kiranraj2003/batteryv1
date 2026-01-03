@@ -11,7 +11,8 @@ const app = express();
 // CORS configuration
 app.use(
   cors({
-    origin: "https://rainbow-mermaid-685c97.netlify.app",
+    origin:  "https://polite-khapse-faa20f.netlify.app"
+,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
