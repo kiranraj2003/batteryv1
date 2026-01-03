@@ -1,6 +1,6 @@
 dbpass: V4zxYlZieka3250W
 # React + Vite
-
+mongodb+srv://kiranindevelopment_db_user:V4zxYlZieka3250W@cluster0.0fs1jgd.mongodb.net/?appName=Cluster0
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
