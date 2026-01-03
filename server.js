@@ -8,9 +8,6 @@ dotenv.config();
 
 const app = express();
 
-// CORS configuration
-import cors from "cors";
-
 app.use(
   cors({
     origin: "*",
