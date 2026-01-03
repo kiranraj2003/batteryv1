@@ -9,10 +9,11 @@ dotenv.config();
 const app = express();
 
 // CORS configuration
+import cors from "cors";
+
 app.use(
   cors({
-    origin:  "https://polite-khapse-faa20f.netlify.app"
-,
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
